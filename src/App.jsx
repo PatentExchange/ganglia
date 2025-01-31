@@ -8,6 +8,7 @@ import Home from './Home'
 import { BrowserRouter, Routes ,Route} from 'react-router-dom'
 import { Example } from './Example'
 import OurTeam from './Components/OurTeam'
+import Footer from './Components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,11 +17,11 @@ function App() {
   // }
   
   function About() {
-    return <h2 className="text-center">About Us</h2>;
+    return <h2 className="text-center">About Us<OurTeam/></h2>;
   }
   
   function Services() {
-    return <h2 className="text-center ">Our Services</h2>;
+    return <h2 className="text-center">Our Services</h2>;
   }
   
   function Contact() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer/>
     </BrowserRouter>
       
     </div>
