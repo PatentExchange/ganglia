@@ -3,11 +3,13 @@ import { useState } from 'react'
 // import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './NavBar'
-import Home from './Home'
+
 // import { Route, Router } from 'lucide-react'
 import { BrowserRouter, Routes ,Route} from 'react-router-dom'
-import { Example } from './Example'
+
 import OurTeam from './Components/OurTeam'
+import WhoAreWe from './Components/WhoAreWe'
+import {Home}  from './Home'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,9 +37,9 @@ function App() {
       <div className='  w-full '>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services/>} />
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/about" element={<Example />} /> */}
+          <Route path="/services" element={<OurTeam/>} />
+          <Route path="/contact" element={<WhoAreWe />} />
         </Routes>
       </div>
     </BrowserRouter>

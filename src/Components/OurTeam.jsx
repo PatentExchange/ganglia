@@ -18,14 +18,12 @@ const OurTeam = () => {
   return (
     <div>
       <section className="py-12 bg-gray-100">
-        <div className="p-4 items-center">
+        <div className="p-4 items-center lg:ml-36 md:ml-32">
           <h2 className="text-4xl font-bold text-gray-800 mb-8 ml-4">Meet Our Team</h2>
           <p className="max-w-2xl text-left text-xl m-4">
-            Ganglia Technologies is driven by a team of industry experts, researchers, and innovators, comprising:
-            
-            Leadership Team: Seasoned professionals in engineering, AI, and healthcare.
-           
-            50+ Employees: Dedicated to developing, refining, and delivering high-impact solutions.
+          At Ganglia Technologies, our strength lies in our people.
+           Led by seasoned professionals in engineering, AI, and healthcare, our leadership team drives innovation and excellence. 
+           With a dedicated workforce of 50+ experts, we are committed to developing, refining, and delivering high-impact solutions that make a difference.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 max-w-6xl mx-auto">

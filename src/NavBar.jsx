@@ -10,7 +10,7 @@ export default function NavBar() {
   const [selected, setSelected] = useState("Home");
 
   return (
-    <nav className="bg-gray-800 p-4 text-white sticky top-0 left-0 w-full shadow-md z-50">
+    <nav className="bg-gray-800 p-4 text-white fixed top-0 left-0 w-full shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">Ganglia</h1>
 
