@@ -8,6 +8,8 @@ import Home from './Home'
 import { BrowserRouter, Routes ,Route} from 'react-router-dom'
 import { Example } from './Example'
 import OurTeam from './Components/OurTeam'
+import OurServices from './Components/OurServices'
+import { OurProducts } from './Components/OurProducts'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +22,7 @@ function App() {
   }
   
   function Services() {
-    return <h2 className="text-center ">Our Services</h2>;
+    return <h2 className="text-center "><OurServices></OurServices></h2>;
   }
   
   function Contact() {
@@ -38,6 +40,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services/>} />
           <Route path="/contact" element={<Contact />} />
+          
         </Routes>
       </div>
     </BrowserRouter>
