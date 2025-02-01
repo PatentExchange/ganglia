@@ -16,6 +16,7 @@ export const Home = () => {
         <ExampleContent />
       </TextParallaxContent>
       
+      
     </div>
     <WhoAreWe/>
     
