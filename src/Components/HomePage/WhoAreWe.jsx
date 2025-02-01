@@ -1,5 +1,5 @@
 import { FiArrowUpRight } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 const WhoAreWe = () => {
   return (
     <div className="relative mb-10"> {/* Added mb-10 to ensure spacing */}
@@ -26,10 +26,13 @@ const WhoAreWe = () => {
             <p className="text-base mt-2 text-blue-950">
               Join us as we continue our journey to make advanced solutions accessible and affordable for everyone.
             </p>
-            <button className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group">
-              Learn more
-              <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
-            </button>
+            <Link
+  to="/about"
+  className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group flex items-center justify-center no-underline"
+>
+  Learn more
+  <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
+</Link>
             
           </div>
         </div>
