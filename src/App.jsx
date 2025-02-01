@@ -2,7 +2,7 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import NavBar from './NavBar'
+import NavBar from './Components/NavBar'
 
 // import { Route, Router } from 'lucide-react'
 import { BrowserRouter, Routes ,Route} from 'react-router-dom'
@@ -13,6 +13,7 @@ import WhoAreWe from './Components/HomePage/WhoAreWe'
 import {Home}  from './Components/HomePage/Home'
 import {AboutUs} from './Components/AboutUs'
 import OurApproach from './Components/OurApproach'
+import Milestones from './Components/Milestones'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,13 +38,13 @@ function App() {
        <div>
       <NavBar />
       </div>
-      <div className='  w-full '>
+      <div className='  w-full mt-10 '>
         <Routes>
           
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<OurApproach/>} />
-          <Route path="/contact" element={<WhoAreWe />} />
+          <Route path="/contact" element={<Milestones />} />
         </Routes>
       </div>
       <Footer/>

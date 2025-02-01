@@ -10,7 +10,7 @@ export const Home = () => {
     <div className="bg-white">
       <TextParallaxContent
         imgUrl={myImage}
-        heading="Ganglia Technologies PVT. LTD."
+        heading="Ganglia Technologies "
         subheading="Unsatisfied with existing technology!"
       >
         <ExampleContent />
@@ -59,7 +59,7 @@ const StickyImage = ({ imgUrl }) => {
       style={{
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "cover",
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
@@ -71,7 +71,7 @@ const StickyImage = ({ imgUrl }) => {
         className="absolute inset-0 bg-neutral-950/70"
         style={{opacity,}}
       />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent top-0 left-0 w-1/4 h-full" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent top-0 left-0 sm:w-1/4 w-3/4 h-full" />
 
     </motion.div>
   );
@@ -96,8 +96,8 @@ const OverlayCopy = ({ subheading, heading }) => {
       ref={targetRef}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-start ml-4 justify-center text-white"
     >
-      <p className="mb-2 text-left text-xl font-bold  md:mb-4 md:text-5xl  ">{heading}</p>
-      <p className="text-left text-4xl italic md:text-2xl">
+      <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">{heading}<span className="text-lg">PVT. LMD.</span></p>
+      <p className="text-left text-xl lg:text-4xl italic md:text-2xl">
         {subheading}
       </p>
       

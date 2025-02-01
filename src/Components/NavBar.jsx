@@ -49,7 +49,7 @@ export default function NavBar() {
       {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-gray-800 py-4 space-y-4 absolute top-full left-0 w-full">
           <p><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></p>
-          <p><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></p>
+          <p><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></p>
           <p><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></p>
           <p><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></p>
         </div>

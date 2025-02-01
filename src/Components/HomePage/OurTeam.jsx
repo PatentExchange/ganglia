@@ -4,14 +4,14 @@ import React from "react";
 
 // Sample team data
 const teamMembers = [
-  { name: "Fran Wilson", image: "/assets/images/emp1.jpeg", social: ["facebook", "twitter", "linkedin"] },
-  { name: "Adam Smith", image:"/assets/images/emp2.jpeg", social: ["facebook", "twitter", "linkedin"] },
-  { name: "Sarah Glenn", image:"/assets/images/emp3.jpeg", social: ["facebook", "twitter", "linkedin"] },
-  { name: "Chris Woakes", image: "/assets/images/emp4.jpeg", social: ["facebook", "twitter", "linkedin"] },
-  { name: "Fran Wilson", image:"/assets/images/emp5.jpeg", social: ["facebook", "twitter", "linkedin"] },
-  { name: "Adam Smith", image: "/assets/images/emp6.jpeg", social: ["facebook", "twitter", "linkedin"] },
-  { name: "Sarah Glenn", image: "/assets/images/emp1.jpeg", social: ["facebook", "twitter", "linkedin"] },
-  { name: "Chris Woakes", image: "/assets/images/emp2.jpeg", social: ["facebook", "twitter", "linkedin"] },
+  { name: "Dr Jayaraj Mymbilly Balakrishnan", image: "/assets/images/emp1.jpeg", position: "Chairman" },
+  { name: "Dr Dasharathraj K Shetty", image:"/assets/images/emp3.jpeg", position: "Managing Director" },
+  { name: "Namesh Malarout", image:"/assets/images/emp2.jpeg", position: "CEO" },
+  { name: "Chris Woakes", image: "/assets/images/emp4.jpeg", position: "Advisor and Mentor" },
+  { name: "Dr Sandeep S Shenoy", image:"/assets/images/emp5.jpeg", position: "Director" },
+  { name: "Dr Balakrishna S Maddodi", image: "/assets/images/emp6.jpeg", position: "Vice Chairman" },
+  { name: "Dr Priya P S", image: "/assets/images/emp1.jpeg", position: "Member" },
+  { name: "Dr Prithvishree Ravindra", image: "/assets/images/emp2.jpeg", position: "Member" },
 ];
 
 const OurTeam = () => {
@@ -38,17 +38,8 @@ const OurTeam = () => {
                 className="w-full rounded-lg mb-4"
               />
               <h3 className="text-xl font-semibold text-gray-700">{member.name}</h3>
-              <div className="flex justify-center space-x-4 mt-2">
-                {member.social.map((platform, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className="text-gray-500 hover:text-gray-800"
-                  >
-                    <i className={`fab fa-${platform}`}></i>
-                  </a>
-                ))}
-              </div>
+              <h4 className="text-base font-semibold text-gray-600">{member.position}</h4>
+
             </div>
           ))}
         </div>

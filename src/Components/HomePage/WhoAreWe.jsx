@@ -30,6 +30,7 @@ const WhoAreWe = () => {
               Learn more
               <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
             </button>
+            
           </div>
         </div>
       </div>

@@ -10,26 +10,22 @@ const processes = [
   },
   {
     title: '🎯 User-Centric Design',
-    description: 'Every product is crafted with efficiency, affordability, and practicality in mind, ensuring seamless usability across industries.',
+    description: 'Every product is optimized for efficiency, affordability, and real-world usability.',
     imgurl:"/assets/images/target.png",
   },
   {
     title: '✔️ Rigorous Testing',
-    description: 'Our prototypes undergo extensive testing to meet global healthcare and industry standards, guaranteeing safety, reliability, and performance.',
+    description: 'Our prototypes undergo extensive testing to meet global healthcare and industry standards, reliability, and performance.',
     imgurl:"/assets/images/testing.png",
   },
-  {
-    title: '🚀 Innovation with Impact',
-    description: 'Redefining technology to create a better tomorrow!',
-    imgurl:"/assets/images/Innovation.png",
-  }
+  
 ];
 
 const OurApproach = () => {
   // Intersection Observer hook
   const { ref, inView } = useInView({
-    triggerOnce: true, // Ensures animation triggers only once when in view
-    threshold: 0.3, // Triggers when 30% of the section is visible
+    triggerOnce: true, 
+    threshold: 0.3, 
   });
 
   return (
@@ -47,11 +43,12 @@ const OurApproach = () => {
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">Our Processes</h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4" ref={ref}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4" ref={ref}>
           {processes.map((process, index) => (
             <motion.div
               key={index}
-              className={`bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300`}
+              className={`bg-white p-6 rounded-lg shadow-[0px_-2px_4px_0px_rgba(0,0,0,0.1),0px_10px_15px_-3px_rgba(0,0,0,0.3)] transform hover:scale-105 transition-all duration-300
+`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }} // Animation based on scroll position
               transition={{ delay: index * 0.2, type: 'spring', stiffness: 100 }}
