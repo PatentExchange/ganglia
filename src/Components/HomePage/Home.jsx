@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import myImage from "/assets/images/background.jpeg"
-import WhoAreWe from "./Components/WhoAreWe";
-import OurTeam from "./Components/OurTeam";
+import WhoAreWe from "./WhoAreWe";
+import OurTeam from "./OurTeam";
 export const Home = () => {   
   return (
-    <div>
+    <div className="flex flex-col gap-2">
     <div className="bg-white">
       <TextParallaxContent
         imgUrl={myImage}
@@ -15,23 +15,12 @@ export const Home = () => {
       >
         <ExampleContent />
       </TextParallaxContent>
-      {/* <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Quality"
-        heading="Never compromise."
-      >
-        <ExampleContent />
-      </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Modern"
-        heading="Dress for the best."
-      >
-        <ExampleContent />
-      </TextParallaxContent> */}
+      
     </div>
     <WhoAreWe/>
+    
     <OurTeam/>
+    
     </div>
   );
 };

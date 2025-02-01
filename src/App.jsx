@@ -7,9 +7,12 @@ import NavBar from './NavBar'
 // import { Route, Router } from 'lucide-react'
 import { BrowserRouter, Routes ,Route} from 'react-router-dom'
 
-import OurTeam from './Components/OurTeam'
-import WhoAreWe from './Components/WhoAreWe'
-import {Home}  from './Home'
+import OurTeam from './Components/HomePage/OurTeam'
+import Footer from './Components/Footer'
+import WhoAreWe from './Components/HomePage/WhoAreWe'
+import {Home}  from './Components/HomePage/Home'
+import {AboutUs} from './Components/AboutUs'
+import OurApproach from './Components/OurApproach'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,11 +21,11 @@ function App() {
   // }
   
   function About() {
-    return <h2 className="text-center">About Us</h2>;
+    return <h2 className="text-center">About Us<OurTeam/></h2>;
   }
   
   function Services() {
-    return <h2 className="text-center ">Our Services</h2>;
+    return <h2 className="text-center">Our Services</h2>;
   }
   
   function Contact() {
@@ -36,12 +39,14 @@ function App() {
       </div>
       <div className='  w-full '>
         <Routes>
-          <Route path="/home" element={<Home />} />
-          {/* <Route path="/about" element={<Example />} /> */}
-          <Route path="/services" element={<OurTeam/>} />
+          
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/services" element={<OurApproach/>} />
           <Route path="/contact" element={<WhoAreWe />} />
         </Routes>
       </div>
+      <Footer/>
     </BrowserRouter>
       
     </div>
