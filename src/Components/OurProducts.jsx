@@ -12,7 +12,7 @@ export const OurProducts = () => {
       name: 'TripMacha AI',
       description: 'Smart Travel Planning',
       details: 'AI-powered travel planning tool designed for personalized, local getaways.',
-      image: '/assets/images/traveltool.jpg',
+      image: '/assets/images/trip.jpg',
     },
   ];
 

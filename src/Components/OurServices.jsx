@@ -6,7 +6,7 @@ const services = [
     {
         title: "AI-Powered Applications",
         subtitle: "Intelligent automation, machine learning, and NLP models",
-        image: "https://www.bing.com/th?id=OIP.UZls5kBwz8FVexR1Tk6WTgHaEK&w=179&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+        image: "/assets/images/ai.jpg",
         description: "We harness the power of artificial intelligence to create advanced applications that automate processes, improve decision-making, and offer personalized user experiences. Our AI solutions include machine learning algorithms, natural language processing (NLP), and intelligent automation to make your business more efficient and future-ready."
     },
     {
@@ -24,7 +24,7 @@ const services = [
     {
         title: "Cloud & Data Solutions",
         subtitle: "Secure cloud computing, data analysis, and AI-driven insights",
-        image: "/assets/images/cloud_data.jpg",
+        image: "/assets/images/cloud.png",
         description: "Leverage the power of the cloud to scale your operations. Our cloud and data solutions provide secure cloud computing environments, advanced data analytics, and AI-driven insights that help businesses make data-driven decisions. We ensure high-performance, security, and reliability, enabling you to unlock the full potential of your data in a seamless cloud environment."
     }
 ];
@@ -65,8 +65,8 @@ const OurServices = () => {
                                     style={{ width: "100%", maxWidth: "1200px" }} 
                                 >
                                     {/* Image Section (Fixed) */}
-                                    <div className={`w-full md:w-70 h-64 flex items-center justify-center transition duration-300 ${index % 2 === 1 ? 'md:order-last' : ''}`}>
-                                        <img src={service.image} alt={service.title} className="w-full h-full object-cover object-right" />
+                                    <div className={`w-full md:w-70 h-64 flex items-center justify-center transition duration-300 object-center ${index % 2 === 1 ? 'md:order-last' : ''}`}>
+                                        <img src={service.image} alt={service.title} className="w-full h-full object-center" />
                                     </div>
 
                                     {/* Text Section (ANIMATED) */}
