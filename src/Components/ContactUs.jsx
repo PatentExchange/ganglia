@@ -1,8 +1,11 @@
 import { faEnvelope, faEnvelopeSquare, faPhone, faPhoneAlt, faPhoneFlip, faPhoneSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
 
 const ContactUs = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+      },[])
     return (
         <div className="">
             <div className="bg-cover bg-center relative"

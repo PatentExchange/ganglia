@@ -10,7 +10,7 @@ import Milestones from './Milestones'
     <div className='bg-gray-50'>
     <div className='pt- relative '>
       {/* Background Layer */}
-      <div className='absolute inset-0 bg-gray-800 opacity-50 z-0'></div>
+      <div className='absolute inset-0 bg-gray-800 opacity-40 z-0'></div>
 
       {/* Content Layer */}
       <div className='relative flex flex-col lg:flex-row md:flex-row p-2'>

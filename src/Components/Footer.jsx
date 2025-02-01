@@ -51,7 +51,7 @@ const Footer = () => {
                         <h3 className="font-bold text-xl mb-4">Our Services</h3>
                         <div className="ml-2">
                             <p><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></p>
-                            <p><Link to="/">Our products</Link></p>
+                            <p><Link to="/services">Our products</Link></p>
                         </div>
                         
                         {/* Social Section */}

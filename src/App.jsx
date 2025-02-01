@@ -16,23 +16,10 @@ import Milestones from './Components/Milestones'
 import OurServices from './Components/OurServices'
 import { OurProducts } from './Components/OurProducts'
 import Blog from './Components/Blog'
-
+import { useEffect } from 'react'
 function App() {
-  // function Home() {
-  //   return <h2 className="text-center mt-20">Welcome to Home Page</h2>;
-  // }
   
-  function About() {
-    return <h2 className="text-center">About Us<OurTeam/></h2>;
-  }
   
-  function Services() {
-    return <h2 className="text-center ">Our services</h2>;
-  }
-  
-  function Contact() {
-    return <h2 className="text-center ">Contact Us</h2>;
-  }
   return (
     <div>
     <BrowserRouter>

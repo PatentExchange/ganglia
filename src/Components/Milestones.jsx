@@ -34,7 +34,7 @@ const Milestones = () => {
       {/* Milestones Section */}
       <section className="py-12">
         <div className="p-4 items-center text-center lg:ml-36 md:ml-32 mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-8 ml-4">Milestones and Recognition</h2>
+          <h2 className="text-4xl  font-bold text-gray-800 mb-8 ml-4">Milestones and Recognition</h2>
           <p className='text-lg w-2/3 text-left mx-auto'>
             We are proud of our achievements in innovation and excellence. 
             From securing patents to winning industry awards, our work is making a real impact. 

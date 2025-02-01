@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, useInView } from "framer-motion";
 import OurProducts from './OurProducts';
 
@@ -30,8 +30,11 @@ const services = [
 ];
 
 const OurServices = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+      },[])
     return (
-        <div className="bg-white h-auto">
+        <div className="bg-white h-auto pt-10">
             {/* Services Section */}
             <div>
                 {/* New Background Section at the Top */}
