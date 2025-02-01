@@ -9,6 +9,7 @@ import { BrowserRouter, Routes ,Route} from 'react-router-dom'
 import { Example } from './Example'
 import OurTeam from './Components/OurTeam'
 import Footer from './Components/Footer'
+import ContactUs from './Components/ContactUs'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,7 +39,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services/>} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactUs/>} />
         </Routes>
       </div>
       <Footer/>
