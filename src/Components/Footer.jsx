@@ -58,10 +58,10 @@ const Footer = () => {
                         <div className="mr-6 h-2/3 flex items-center">
                             {/* <h3 className="text-xl font-semibold mb-4">Team Solutions</h3> */}
                             <div className="flex space-x-6 text-2xl">
-                                <FontAwesomeIcon icon={faFacebook} />
-                                <FontAwesomeIcon icon={faXTwitter} />
-                                <FontAwesomeIcon icon={faLinkedin} />
-                                <FontAwesomeIcon icon={faEnvelope} />
+                                <FontAwesomeIcon className="transition hover:scale-125" icon={faFacebook} />
+                                <FontAwesomeIcon className="transition hover:scale-125" icon={faXTwitter} />
+                                <FontAwesomeIcon className="transition hover:scale-125" icon={faLinkedin} />
+                                <FontAwesomeIcon className="transition hover:scale-125" icon={faEnvelope} />
                             </div>
                         </div>
                     </div>
