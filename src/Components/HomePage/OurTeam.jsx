@@ -4,14 +4,14 @@ import React from "react";
 
 // Sample team data
 const teamMembers = [
-  { name: "Dr Jayaraj Mymbilly Balakrishnan", image: "/assets/images/emp1.jpeg", position: "Chairman" },
-  { name: "Dr Dasharathraj K Shetty", image:"/assets/images/emp3.jpeg", position: "Managing Director" },
-  { name: "Namesh Malarout", image:"/assets/images/emp2.jpeg", position: "CEO" },
-  { name: "Commander(Dr) Anil Rana", image: "/assets/images/emp4.jpeg", position: "Advisor and Mentor" },
-  { name: "Dr Sandeep S Shenoy", image:"/assets/images/emp5.jpeg", position: "Director" },
-  { name: "Dr Balakrishna S Maddodi", image: "/assets/images/emp6.jpeg", position: "Vice Chairman" },
-  { name: "Dr Priya P S", image: "/assets/images/emp1.jpeg", position: "Member" },
-  { name: "Dr Prithvishree Ravindra", image: "/assets/images/emp2.jpeg", position: "Member" },
+  { name: "Dr Jayaraj Mymbilly Balakrishnan", image: "/assets/images/chairman.jpg", position: "Chairman" },
+  { name: "Dr Dasharathraj K Shetty", image:"/assets/images/md.jpg", position: "Managing Director" },
+  { name: "Namesh Malarout", image:"/assets/images/img.jpg", position: "CEO" },
+  { name: "Commander(Dr) Anil Rana", image: "/assets/images/advisor_mentor.jpg", position: "Advisor and Mentor" },
+  { name: "Dr Sandeep S Shenoy", image:"/assets/images/director.jpg", position: "Director" },
+  { name: "Dr Balakrishna S Maddodi", image: "/assets/images/vice_chairman.jpg", position: "Vice Chairman" },
+  { name: "Dr Priya P S", image: "/assets/images/member1.jpg", position: "Member" },
+  { name: "Dr Prithvishree Ravindra", image: "/assets/images/member2.jpg", position: "Member" },
 ];
 
 

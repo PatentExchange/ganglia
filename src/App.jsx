@@ -13,6 +13,7 @@ import {AboutUs} from './Components/AboutUs'
 import OurApproach from './Components/OurApproach'
 import ContactUs from './Components/ContactUs'
 import Milestones from './Components/Milestones'
+import Blog from './Components/Blog'
 
 function App() {
   // function Home() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<OurApproach/>} />
+          <Route path="/blog" element={<Blog/>} />
           <Route path="/contact" element={<ContactUs/>} />
         </Routes>
       </div>

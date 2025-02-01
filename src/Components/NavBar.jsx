@@ -21,7 +21,8 @@ export default function NavBar() {
           {tabs.map((tab) => (
             <Link
               key={tab}
-              to={tab === "Home" ? "/" : tab === "About Us" ? "/about" : `/${tab.toLowerCase()}`}
+              to={tab === "Home" ? "/" : tab === "About Us" ? "/about" :`/${tab.toLowerCase()}`}
+
               onClick={() => setSelected(tab)}
               className="relative text-white px-4 py-1 rounded-md"
             >
