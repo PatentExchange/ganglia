@@ -13,6 +13,8 @@ import {AboutUs} from './Components/AboutUs'
 import OurApproach from './Components/OurApproach'
 import ContactUs from './Components/ContactUs'
 import Milestones from './Components/Milestones'
+import OurServices from './Components/OurServices'
+import { OurProducts } from './Components/OurProducts'
 import Blog from './Components/Blog'
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
   }
   
   function Services() {
-    return <h2 className="text-center">Our Services</h2>;
+    return <h2 className="text-center ">Our services</h2>;
   }
   
   function Contact() {
@@ -42,7 +44,7 @@ function App() {
           
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<OurApproach/>} />
+          <Route path="/services" element={<OurServices/>} />
           <Route path="/blog" element={<Blog/>} />
           <Route path="/contact" element={<ContactUs/>} />
         </Routes>

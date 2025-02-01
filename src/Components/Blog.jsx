@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 const Blog = () => {
   return (
-    <div className='p-20 h-[52vh]'>
-        <p className='text-4xl text-center'>Coming Soon</p>
-    </div>
-  )
-}
+    <div className='h-[55vh] flex flex-col justify-center items-center'>
+      <div className='text-center mb-10'>
+        <h1 className='text-5xl font-bold mb-6'>Coming Soon</h1>
+        <p className='text-xl text-gray-400'>Stay tuned for insights on healthcare innovation, AI trends, and business automation.</p>
+      </div>
 
-export default Blog
+    </div>
+  );
+};
+
+export default Blog;
