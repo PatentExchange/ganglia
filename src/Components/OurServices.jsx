@@ -35,10 +35,8 @@ const OurServices = () => {
       },[])
     return (
         <div className="bg-white h-auto pt-10">
-            {/* Services Section */}
-            <div>
                 {/* New Background Section at the Top */}
-                <div className="relative mb- max-h-60">
+                <div className="relative max-h-60">
                     <motion.div 
                         className="w-full h-64 md:h-70 lg:h-80 bg-cover bg-center bg-gray-700"
                         initial={{ opacity: 0, y:-100 }}
@@ -111,12 +109,6 @@ const OurServices = () => {
                     </div>
                 </div>
             </div>
-
-            {/* OurProducts Section (Comes After Services) */}
-            <div className="relative mt-1">
-                <OurProducts />
-            </div>
-        </div>
     );
 };
 

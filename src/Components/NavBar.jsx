@@ -7,8 +7,10 @@ const tabs = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
+  { name: "Our Products", path: "/ourproducts" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
+  
 ];
 
 export default function NavBar() {

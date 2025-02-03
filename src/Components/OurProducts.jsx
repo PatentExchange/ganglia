@@ -17,20 +17,31 @@ export const OurProducts = () => {
   ];
 
   return (
-    <div className="h-auto bg-gray-100 py-10 mb-20">
-      <div className="pb-0.5 pt-0.5">
-        <h1 className="text-4xl font-bold text-gray-700 text-center mb-6">Our Products</h1>
-        <p className="text-center text-gray-600 mb-10 mx-auto max-w-5xl text-lg">
-          Explore our innovative solutions designed to enhance everyday life by integrating cutting-edge technology, affordability, and user-friendly design.
-          From revolutionizing medical procedures to making travel planning smarter, our products are crafted to bring efficiency, accessibility, and convenience to your world.
-        </p>
-      </div>
+    <div className=" bg-gray-100 py-7 mb-20">
+      <div className=" relative h-72 flex flex-col items-center justify-center text-center">
+      <div className='absolute inset-0 bg-gray-400 opacity-60 z-0'></div>
+  {/* Background Image */}
+  <img 
+    src="/assets/images/bg.jpg" 
+    className="absolute inset-0 w-full h-full object-center mix-blend-multiply z-0" 
+    alt="Background"
+  />
+  {/* Text Content */}
+  <div className="relative  bg-white/50 p-4 h-full w-full">
+    <h1 className="text-4xl font-bold text-gray-700 mb-6">Our Products</h1>
+    <p className="text-gray-600 mb-10 mx-auto max-w-5xl text-lg">
+      Explore our innovative solutions designed to enhance everyday life by integrating cutting-edge technology, affordability, and user-friendly design.
+      From revolutionizing medical procedures to making travel planning smarter, our products are crafted to bring efficiency, accessibility, and convenience to your world.
+    </p>
+  </div>
+</div>
+
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:max-w-3xl max-w-md mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:w-3xl  mx-auto relative -top-23">
         {products.map((product, index) => (
           <div 
             key={index} 
-            className="text-gray-800 shadow-lg shadow-gray-400 rounded-lg overflow-hidden h-full flex flex-col transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-gray-500"
+            className="text-gray-800 shadow-lg shadow-gray-400 rounded-lg overflow-hidden h-full flex flex-col transform transition duration-300 mx-5 ease-in-out hover:scale-105 hover:shadow-gray-500"
           >
             {/* Image Section - Takes 2/3 height */}
             <div className="h-60">

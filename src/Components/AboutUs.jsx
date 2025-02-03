@@ -13,7 +13,7 @@ import Milestones from './Milestones'
       <div className='absolute inset-0 bg-gray-800 opacity-40 z-0'></div>
 
       {/* Content Layer */}
-      <div className='relative flex flex-col lg:flex-row md:flex-row p-2'>
+      <div className='relative flex flex-col lg:flex-row md:flex-row p-2 '>
         <div className='p-2 my-auto text-white'>
           <h1 className='text-4xl lg:text-5xl md:text-5xl font-bold text-center mb-4 pt-10'> About Us .</h1>
           <h1 className='text-2xl lg:text-3xl md:text-3xl font-bold text-center mb-4'> Finding Inspiration in Every Turn</h1>
