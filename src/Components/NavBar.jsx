@@ -27,7 +27,7 @@ export default function NavBar() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-row gap-2">
           <img src="/assets/images/gangliaLogo.png" className="h-8 w-8" />
-          <h1 className="text-xl font-bold">Ganglia</h1>
+          <h1 className="text-xl font-bold">Ganglia Technologies<small className="text-xs italic">&nbsp; Pvt. Ltd.</small></h1>
         </div>
 
         {/* Desktop Navigation */}

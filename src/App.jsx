@@ -17,6 +17,8 @@ import OurServices from './Components/OurServices'
 import { OurProducts } from './Components/OurProducts'
 import Blog from './Components/Blog'
 import { useEffect } from 'react'
+import ProductDetail from './Components/ProductDetail'
+
 function App() {
   
   
@@ -34,6 +36,7 @@ function App() {
           <Route path="/services" element={<OurServices/>} />
           <Route path="/blog" element={<Blog/>} />
           <Route path="/contact" element={<ContactUs/>} />
+          <Route path="/product-detail/:title" element={<ProductDetail/>} />
         </Routes>
       </div>
       <Footer/>
