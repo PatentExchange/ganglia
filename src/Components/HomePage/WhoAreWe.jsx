@@ -1,3 +1,5 @@
+import { faRoute } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import content from "../../../content.json"
@@ -16,7 +18,7 @@ const WhoAreWe = () => {
         </div>
 
         <h2 className="absolute left-0 top-36 lg:top-56 md:top-56 text-4xl lg:text-6xl md:text-5xl sm:text-5xl font-bold text-white mb-8 ml-4">
-          Who Are We?
+          Who Are We?<FontAwesomeIcon icon={faRoute} style={{color:'#24194C'}}></FontAwesomeIcon>
         </h2>
 
         {/* Right content */}
