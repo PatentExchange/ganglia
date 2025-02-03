@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
-import myImage from "/assets/images/background.jpeg"
+import myImage from "/assets/images/landingPage.jpeg"
 import WhoAreWe from "./WhoAreWe";
 import OurTeam from "./OurTeam";
 export const Home = () => {   
@@ -11,7 +11,8 @@ export const Home = () => {
       <TextParallaxContent
         imgUrl={myImage}
         heading="Ganglia Technologies "
-        subheading="Unsatisfied with existing technology!"
+        tagline="Unsatisfied with existing technology!"
+        description="is revolutionizing healthcare and AI-driven solutions, making cutting-edge innovation accessible and affordable."
       >
         <ExampleContent />
       </TextParallaxContent>
@@ -28,7 +29,7 @@ export const Home = () => {
 
 const IMG_PADDING = 0;
 
-const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+const TextParallaxContent = ({ imgUrl, tagline, heading,description, children }) => {
   return (
     <div
       style={{
@@ -38,7 +39,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
     >
       <div className="relative h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
-        <OverlayCopy heading={heading} subheading={subheading} />
+        <OverlayCopy heading={heading} tagline={tagline} description={description} />
       </div>
       {children}
     </div>
@@ -72,13 +73,13 @@ const StickyImage = ({ imgUrl }) => {
         className="absolute inset-0 bg-neutral-950/70"
         style={{opacity,}}
       />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent top-0 left-0 sm:w-1/4 w-3/4 h-full" />
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent top-0 left-0 sm:w-1/4 w-3/4 h-full" /> */}
 
     </motion.div>
   );
 };
 
-const OverlayCopy = ({ subheading, heading }) => {
+const OverlayCopy = ({ tagline, heading,description }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -95,12 +96,11 @@ const OverlayCopy = ({ subheading, heading }) => {
         opacity,
       }}
       ref={targetRef}
-      className="absolute left-0 top-0 flex h-screen w-full flex-col items-start ml-4 justify-center text-white"
+      className="absolute left-0 top-0 flex h-screen w-full flex-col items-start pl-4 justify-center text-white overflow-x-clip"
     >
-      <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">{heading}<span className="text-lg">PVT. LMD.</span></p>
-      <p className="text-left text-xl lg:text-4xl italic md:text-2xl">
-        {subheading}
-      </p>
+      <p className="text-left text-xl lg:text-5xl italic md:text-3xl mb-12">{tagline}</p>
+      <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">{heading}<span className="text-lg">Pvt. Ltd.</span></p>
+      <p className="text-lg">{description}</p>
       
     </motion.div>
   );

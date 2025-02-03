@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const OurProducts = () => {
   const products = [
@@ -15,6 +16,10 @@ export const OurProducts = () => {
       image: '/assets/images/trip.jpg',
     },
   ];
+  const navigate=useNavigate();
+  const handleOnclick=(product)=>{
+    navigate(`/product-detail/${product.name}`, {state:{product}})
+  }
 
   return (
     <div className=" bg-gray-100 py-7 mb-20">
@@ -42,6 +47,7 @@ export const OurProducts = () => {
           <div 
             key={index} 
             className="text-gray-800 shadow-lg shadow-gray-400 rounded-lg overflow-hidden h-full flex flex-col transform transition duration-300 mx-5 ease-in-out hover:scale-105 hover:shadow-gray-500"
+            onClick={(e)=>{handleOnclick(product)}}
           >
             {/* Image Section - Takes 2/3 height */}
             <div className="h-60">
