@@ -1,46 +1,47 @@
-import { faEnvelope, faEnvelopeSquare, faPhone, faPhoneAlt, faPhoneFlip, faPhoneSlash } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
+import content from "../../content.json";
 
 const ContactUs = () => {
-    useEffect(()=>{
-        window.scrollTo(0,0)
-      },[])
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className="">
             <div className="bg-cover bg-center relative"
             //   style={{ backgroundImage: "url('/assets/images/background.jpeg')" }}
             >
                 <div className='absolute inset-0 bg-black opacity-90 -z-10'>
-                <img src="/assets/images/contactBG.jpeg" className='w-full h-64 object-cover mask-image brightness-50' />
+                    <img src="/assets/images/contactBG.jpeg" className='w-full h-64 object-cover mask-image brightness-50' />
 
                 </div>
 
                 <h1 className="text-4xl lg:text-6xl md:text-5xl font-bold text-white pb-28 pt-10 text-center text-nowrap">Contact Us</h1>
-                
+
             </div>
 
             <div className="w-5/6 mx-auto -mt-16 flex flex-col sm:flex-row justify-evenly gap-8 bg-gray-50 mb-6 shadow-2xl">
                 {/* Contact Details */}
                 <div className="p-8 rounded-lg">
                     <h2 className="text-xl font-semibold border-b pb-2 mb-4">Get in Touch</h2>
-                    <p><strong><FontAwesomeIcon icon={faPhone}/> Phone:</strong> 
-                        (+91) 81097 82903
+                    <p><strong><FontAwesomeIcon icon={faPhone} /> Phone:</strong>
+                        &nbsp; {content.contact.phone}
                     </p>
-                    <p><strong><FontAwesomeIcon icon={faEnvelope}/> Email:</strong> 
-                        info@ganglia.in
+                    <p><strong><FontAwesomeIcon icon={faEnvelope} /> Email:</strong>
+                        &nbsp;{content.contact.email}
                     </p>
                     <div className="mt-10">
-                        <span className="text-lg font-semibold">GANGLIA TECHNOLOGIES PRIVATE LTD.</span>,
-                        <br/>
+                        <span className="text-lg font-semibold">{content.contactUs.title}</span>,
+                        <br />
                         <p className="ml-3">
-                        Manipal Government of Karnataka Bioincubator,<br/>
-                        III Floor, MAHE Advanced Research Centre Behind MMMC, Manipal, Karnataka 576104.<br/>
-                        CIN: U73100KA2022PTC164385<br/>
-                        TAN: BLRG29581G
+                            {content.contactUs.address.map((element, index) => (
+                                <p>{element}</p>
+                            ))}
+
                         </p>
                     </div>
-                    <p className="text-red-500 mt-2">Closed on Sundays and Public Holidays</p>
+                    <p className="text-red-500 mt-2">{content.contactUs.footNote}</p>
                 </div>
 
                 {/* Contact Form */}
@@ -58,10 +59,9 @@ const ContactUs = () => {
                 </div>
             </div>
             <div className="px-16 relative p-10 flex flex-col">
-                {/* <div className='absolute inset-0 bg-gray-800 opacity-60 -z-10'></div> */}
-                <h3 className="font-bold text-xl sm:text-4xl sm:m-auto mb-6 sm:mb-6 text-nowrap">Send Us a Message</h3>
+                <h3 className="font-bold text-xl sm:text-4xl sm:m-auto mb-6 sm:mb-6 text-nowrap">{content.contactUs.subtitle}</h3>
                 <p className="max-w-4xl text-base sm:text-xl mx-auto">
-                    We'd love to hear from you! Whether it's inquiries, feedback, or your own stories of how our AI and software solutions helped, please fill out the form below. Each message is valued, and we promise to respond with dedication and care.
+                    {content.contactUs.note}
                 </p>
             </div>
         </div>

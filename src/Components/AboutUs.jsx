@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import OurApproach from './OurApproach'
 import Milestones from './Milestones'
+import content from '../../content.json'
 
  export const AboutUs = () => {
   useEffect(()=>{
@@ -10,17 +11,15 @@ import Milestones from './Milestones'
     <div className='bg-gray-50'>
     <div className='pt- relative '>
       {/* Background Layer */}
-      <div className='absolute inset-0 bg-gray-800 opacity-40 z-0'></div>
+      <div className='absolute inset-0 bg-gray-800 opacity-50 z-0'></div>
 
       {/* Content Layer */}
-      <div className='relative flex flex-col lg:flex-row md:flex-row p-2 '>
+      <div className='relative flex flex-col lg:flex-row md:flex-row p-2'>
         <div className='p-2 my-auto text-white'>
           <h1 className='text-4xl lg:text-5xl md:text-5xl font-bold text-center mb-4 pt-10'> About Us .</h1>
-          <h1 className='text-2xl lg:text-3xl md:text-3xl font-bold text-center mb-4'> Finding Inspiration in Every Turn</h1>
+          <h1 className='text-2xl lg:text-3xl md:text-3xl font-bold text-center mb-4'>{content.aboutUs.heroTag}</h1>
           <p className='text-lg w-3/4 text-left mx-auto'>
-            We are a team of doctors, engineers, management professionals, 
-            and students from across MAHE who came together to solve the problems faced by various sectors of India. 
-            With a shared vision, we combine our expertise to develop effective and affordable solutions.
+            {content.aboutUs.heroDescription}
           </p>
         </div>
         <img src="/assets/images/gangliateam.png" className='h-lg w-xl mix-blend-multiply' />

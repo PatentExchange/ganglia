@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView } from "framer-motion";
 import OurProducts from './OurProducts';
+import content from '../../content.json'
 
 const services = [
     {
@@ -54,7 +55,7 @@ const OurServices = () => {
                 {/* Services List */}
                 <div className='relative w-5/6 mx-auto pb-1'> 
                     <div className="flex flex-wrap justify-center relative -top-16">
-                        {services.map((service, index) => {
+                        {content.services.map((service, index) => {
                             const ref = useRef(null);
                             const isInView = useInView(ref, { triggerOnce: false, margin: "-50px 0px" });
 
