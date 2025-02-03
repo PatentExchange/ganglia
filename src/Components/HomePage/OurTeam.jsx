@@ -6,7 +6,7 @@ import React from "react";
 const teamMembers = [
   { name: "Dr Jayaraj Mymbilly Balakrishnan", image: "/assets/images/chairman.jpg", position: "Chairman" },
   { name: "Dr Dasharathraj K Shetty", image:"/assets/images/md.jpg", position: "Managing Director" },
-  { name: "Namesh Malarout", image:"/assets/images/img.jpg", position: "CEO" },
+  { name: "Namesh Malarout", image:"/assets/images/ceo.png", position: "CEO" },
   { name: "Commander(Dr) Anil Rana", image: "/assets/images/advisor_mentor.jpg", position: "Advisor and Mentor" },
   { name: "Dr Sandeep S Shenoy", image:"/assets/images/director.jpg", position: "Director" },
   { name: "Dr Balakrishna S Maddodi", image: "/assets/images/vice_chairman.jpg", position: "Vice Chairman" },
