@@ -22,7 +22,7 @@ export const OurProducts = () => {
   }
 
   return (
-    <div className=" bg-gray-100 py-7 mb-20">
+    <div className=" bg-gray-100 py-7 ">
       <div className=" relative h-72 flex flex-col items-center justify-center text-center">
       <div className='absolute inset-0 bg-gray-400 opacity-60 z-0'></div>
   {/* Background Image */}
@@ -61,8 +61,8 @@ export const OurProducts = () => {
             {/* Content Section - Takes 1/3 height */}
             <div className="h-2/4 p-4 flex flex-col justify-center text-center">
               <h3 className="text-xl font-semibold mb-5">{product.name}</h3>
-              <p className="text-gray-700 text-sm">{product.description}</p>
-              <p className="text-gray-700 text-sm">{product.details}</p>
+              <p className="text-gray-900  italic text-base">{product.description}</p>
+              {/* <p className="text-gray-700 text-sm">{product.details}</p> */}
             </div>
           </div>
         ))}

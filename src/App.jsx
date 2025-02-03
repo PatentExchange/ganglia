@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
     <BrowserRouter>
-       <div>
+       <div >
       <NavBar />
       </div>
       <div className='  w-full mt-10 '>

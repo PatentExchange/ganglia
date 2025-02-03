@@ -33,7 +33,7 @@ export default function NavBar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 text-lg relative">
+        <div className="hidden md:flex space-x-1 text-lg relative">
           {tabs.map((tab) => (
             <Link
               key={tab.name}
