@@ -1,4 +1,5 @@
 import React from 'react';
+import content from "../../content.json"
 
 const awards = [
   {
@@ -36,15 +37,13 @@ const Milestones = () => {
         <div className="p-4 items-center text-center lg:ml-36 md:ml-32 mb-12">
           <h2 className="text-4xl  font-bold text-gray-800 mb-8 ml-4">Milestones and Recognition</h2>
           <p className='text-lg w-2/3 text-left mx-auto'>
-            We are proud of our achievements in innovation and excellence. 
-            From securing patents to winning industry awards, our work is making a real impact. 
-            Here are some of our key milestones:
+            {content.milestoneDescription}
           </p>
         </div>
 
         {/* Award List */}
         <div className="flex flex-wrap justify-center gap-8 px-4 w-[90%] mx-auto">
-          {awards.map((award, index) => (
+          {content.awardsAndRecognition.map((award, index) => (
             <div key={index} className="flex flex-col items-center bg-white p-4 rounded-lg shadow-lg mb-3 w-80">
               <img src={award.imgurl} alt={award.title} className="w-16 h-16 -mt-8 mb-4" />
               <span className="text-lg text-gray-600 mb-2">{award.year}</span>

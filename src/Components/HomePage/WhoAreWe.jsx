@@ -2,6 +2,8 @@ import { faRoute } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import content from "../../../content.json"
+
 const WhoAreWe = () => {
   return (
     <div className="relative mb-10"> {/* Added mb-10 to ensure spacing */}
@@ -22,11 +24,11 @@ const WhoAreWe = () => {
         {/* Right content */}
         <div className="relative text-left mt-10 w-[90%] lg:w-full md:w-full h-[300px]">
           <div className="absolute left-10 lg:-left-10 md:-left-10 -top-30 lg:top-0 md:top-0 p-6 lg:p-20 md:p-16 text-base lg:text-xl md:text-xl bg-gray-100 rounded-md shadow-xl">
-            <p>At Ganglia Technologies, we are a team focused on creating innovative and affordable solutions in healthcare and technology.
-            We combine AI and engineering to develop products that improve lives and make operations more efficient. Our goal is to make advanced technology accessible and impactful for everyone.
+            <p>
+              {content.home.whoAreWe}
             </p>
             <p className="text-base mt-2 text-blue-950">
-              Join us as we continue our journey to make advanced solutions accessible and affordable for everyone.
+            {content.home.joinUs}
             </p>
             <Link
   to="/about"

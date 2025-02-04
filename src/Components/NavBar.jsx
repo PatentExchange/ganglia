@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import content from "../../content.json";
 
 const tabs = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Our Products", path: "/ourproducts" },
-  { name: "Blog", path: "/blog" },
+  // { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
   
 ];
@@ -29,7 +30,7 @@ export default function NavBar() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-row gap-2">
           <img src="/assets/images/gangliaLogo.png" className="h-8 w-8" />
-          <h1 className="text-xl font-bold">Ganglia Technologies<small className="text-xs italic">&nbsp; Pvt. Ltd.</small></h1>
+          <h1 className="text-xl font-bold">{content.home.companyName}<small className="text-xs italic">&nbsp; Pvt. Ltd.</small></h1>
         </div>
 
         {/* Desktop Navigation */}

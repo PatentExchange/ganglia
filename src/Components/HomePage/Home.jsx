@@ -4,15 +4,17 @@ import { FiArrowUpRight } from "react-icons/fi";
 import myImage from "/assets/images/landingPage.jpeg"
 import WhoAreWe from "./WhoAreWe";
 import OurTeam from "./OurTeam";
+import content from "../../../content.json"
+
 export const Home = () => {   
   return (
     <div className="flex flex-col gap-2">
     <div className="bg-white">
       <TextParallaxContent
         imgUrl={myImage}
-        heading="Ganglia Technologies "
-        tagline="Unsatisfied with existing technology!"
-        description="is revolutionizing healthcare and AI-driven solutions, making cutting-edge innovation accessible and affordable."
+        heading={content.home.companyName}
+        tagline={content.home.heroTagline}
+        description={content.home.description}
       >
         <ExampleContent />
       </TextParallaxContent>
@@ -99,7 +101,7 @@ const OverlayCopy = ({ tagline, heading,description }) => {
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-start pl-4 justify-center text-white overflow-x-clip"
     >
       <p className="text-left text-xl lg:text-5xl italic md:text-3xl mb-12">{tagline}</p>
-      <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">{heading}<span className="text-lg">Pvt. Ltd.</span></p>
+      <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">{heading}<span className="text-lg">&nbsp; Pvt. Ltd.</span></p>
       <p className="text-lg">{description}</p>
       
     </motion.div>
@@ -113,10 +115,7 @@ const ExampleContent = () => (
     </h1>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-      Founded with the vision to innovate and simplify complex industries, 
-      Ganglia Technologies has grown into a leader in healthcare technology and AI-driven solutions. 
-      Our journey began with a passion for making technology more accessible, and today,
-       we’re proud to deliver products that improve lives and enhance business operations.
+      {content.home.ourStory}
       </p>
       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
         {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium

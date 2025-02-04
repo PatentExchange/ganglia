@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import myImage from "/assets/images/gangliaLogo.png"
+import content from "../../content.json";
 
 const Footer = () => {
     return (
@@ -12,16 +13,15 @@ const Footer = () => {
                 <div className="mx-auto justify-between ml-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="inline text-gray-400">
                         <img src={myImage} className="h-20" />
-                        <p>(+91) 1234567890</p>
-                        <p>Headquarters: Manipal, Karnataka, India</p>
-                        <p>Email: info@ganglia.in</p>
-                        <p>Website: www.ganglia.in</p>
+                        <p>Phone: {content.contact.phone}</p>
+                        <p>Headquarters: {content.contact.headquarters}</p>
+                        <p>Email: {content.contact.email}</p>
                     </div>
                     {/* Get in Touch Section */}
                     <div>
-                        <h3 className="font-bold text-xl mb-4">Get in Touch</h3>
+                        <h3 className="font-bold text-xl mb-4">{content.footer.subhead}</h3>
                         <p className="mb-4">
-                            Don’t miss any updates!
+                        {content.footer.subtagline}
                         </p>
                         <form className="flex flex-col gap-4 mr-6">
                             <input
