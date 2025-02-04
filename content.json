@@ -54,12 +54,12 @@
             "position": "Vice Chairman"
         },
         {
-            "name": "Dr Priya P S",
+            "name": "Lorem, ipsum dolor.",
             "image": "/assets/images/member1.jpg",
             "position": "Member"
         },
         {
-            "name": "Dr Prithvishree Ravindra",
+            "name": "Lorem, ipsum dolor.",
             "image": "/assets/images/member2.jpg",
             "position": "Member"
         }
@@ -181,39 +181,102 @@
         {
             "name": "Laryngoscope",
              "description":"The Smart, Affordable Solution",
-            "details": "Ganglia’s patented video-laryngoscope is transforming critical airway management by making advanced technology affordable and widely accessible.",
+            "details": "Ganglia Technologies' patented smart video-laryngoscope is designed to provide cutting-edge airway management at an affordable cost. Our device integrates advanced imaging, continuous oxygenation, and user-friendly features, making it the most accessible and efficient solution for medical professionals.",
             "whyChooseUs":"Traditional video-laryngoscopes cost ₹7+ lakhs, making them inaccessible to many hospitals, especially in rural areas. Our affordable, high-quality alternative aims to bridge this gap, priced at just ₹1.5–2 lakhs.",
             "image": "/assets/images/laryngoscope.png",
 
-            "features": [
-                "Affordable: Priced at ₹1.5–2 lakhs, while competitors charge ₹7+ lakhs",
-                "Multiple Wide-Angle Cameras: Seamless real-time footage to monitors, phones, or computers",
-                "Built-in Oxygen Tube: Ensures continuous oxygen supply during intubation",
-                "Movable Tip for Trauma-Free Intubation",
-                "Lightweight & Easy to Use: Can be operated by nurses with basic training"
+            "keyFeatures":[{
+                "title": "Multiple Wide-Angle Cameras for Clearer Visualization",
+                "details": [
+                  "Equipped with multiple high-resolution cameras for superior airway visualization.",
+                  "Real-time video streaming to monitors, phones, or computers for remote monitoring and collaboration."
+                ]
+              },
+              {
+                "title": "Built-in Oxygen Tube for Continuous Oxygenation",
+                "details": [
+                  "Traditional laryngoscopes interrupt oxygen supply, increasing patient risk.",
+                  "Our device ensures uninterrupted oxygen flow, improving patient safety and comfort."
+                ]
+              },
+              {
+                "title": "Lightweight & Ergonomic Design",
+                "details": [
+                  "Significantly lighter than other video-laryngoscopes.",
+                  "Ergonomic handle & controls for better grip and maneuverability."
+                ]
+              },
+              {
+                "title":" Movable Tip for Trauma-Free Intubation",
+                "details": [
+                  "A precision-controlled movable tip (tongue) to gently manipulate the epiglottis, reducing patient discomfort.",
+                  "Controlled by a joystick, ensuring a smoother intubation process."
+                ]
+              },
+              {
+                "title": "Ease of Use – No Doctor Needed for Basic Use",
+                "details": [
+                  "Designed for intuitive operation, enabling trained nurses to handle basic intubation procedures.",
+                  "Remote viewing capability allows doctors to supervise from a distance."
+                ]
+              }
             ],
             "targetAudience": [
                 "Hospitals & Clinics",
                 "Medical Colleges & Research Institutions",
                 "Government Healthcare Initiatives"
+            ],
+            "table":[
+                {"feature":"Price","ourAdvantages":"₹1.5–2 Lakhs","Competitors":"₹7+ Lakhs"},
+                {"feature":"Multiple Cameras","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"Continuous Oxygenation","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"Remote Viewing","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"Movable Tip","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"Usable by Nurses","ourAdvantages":"✅ Yes","Competitors":"❌ No"}
             ]
         },
         {
             "name": "TripMacha AI",
             "description":"Smart Travel Planning",
-            "details": "AI-powered travel planning tool designed for personalized, local getaways.",
+            "details": "TripMacha is an AI-powered travel assistant designed for short-distance travel planning, offering personalized itineraries, real-time optimization, and eco-friendly suggestions.",
             "whyChooseUs":"Most travel platforms overload users with information, leading to decision fatigue and inefficient planning. TripMacha simplifies the process with smart automation and real-time AI-driven recommendations.",   
             "image": "/assets/images/trip.jpg",
-            "features": [
-                "Instant Itineraries: AI-generated travel plans optimized for time, location & sustainability",
-                "Eco-Friendly Travel: Recommends sustainable options and authentic experiences",
-                "Hyper-Local Focus: Ideal for short trips within 70 km"
-            ],
+            "keyFeatures": [
+                {
+                  "title": "Instant Personalized Itineraries",
+                  "details": [
+                    "AI generates tailored travel plans based on your preferences, schedule, and budget.",
+                    "Takes into account local attractions, food, and hidden gems.",
+                    "Adjusts plans based on weather, traffic, and store timings."
+                  ]
+                },
+                {
+                  "title": "Designed for Short Trips (Under 70 km)",
+                  "details": [
+                    "Focuses on quick getaways and local travel, a neglected segment in the travel industry.","Perfect for weekend trips, one-day outings, and business travelers."
+                  ]
+                },
+             
+                {
+                  "title": "Eco-Friendly Travel Choices",
+                  "details": [
+                    "Recommends sustainable travel options, including public transport and eco-friendly hotels.",
+                    "Promotes GI-tagged products and traditional cuisines, supporting local economies."
+                  ]
+                }
+              ],
             "targetAudience": [
                 "Frequent Travelers",
                 "Business Professionals",
                 "Sustainable Tourism Advocates",
                 "Government & Tourism Boards"
+            ],
+            "table":[
+                {"feature":"Short-Trip Focus    ","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"AI-Powered Personalization","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"Real-Time Optimization","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"Sustainable Travel Options","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
+                {"feature":"Local Experience Discovery","ourAdvantages":"✅ Yes","Competitors":"❌ No"}
             ]
         }
     ],

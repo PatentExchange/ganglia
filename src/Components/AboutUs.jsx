@@ -19,7 +19,7 @@ import content from '../../content.json'
           <h1 className='text-4xl lg:text-5xl md:text-5xl font-bold text-center mb-4 pt-10'> About Us .</h1>
           <h1 className='text-2xl lg:text-3xl md:text-3xl font-bold text-center mb-4'>{content.aboutUs.heroTag}</h1>
           <p className='text-lg w-3/4 text-left mx-auto'>
-            {content.aboutUs.heroDescription}
+            
           </p>
         </div>
         <img src="/assets/images/gangliateam.png" className='h-lg w-xl mix-blend-multiply' />

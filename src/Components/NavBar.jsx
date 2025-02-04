@@ -9,7 +9,7 @@ const tabs = [
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Our Products", path: "/ourproducts" },
-  { name: "Blog", path: "/blog" },
+  // { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
   
 ];

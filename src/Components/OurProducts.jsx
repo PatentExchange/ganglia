@@ -2,21 +2,9 @@ import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import content from '../../content.json';
 
+
 export const OurProducts = () => {
-  const products = [
-    {
-      name: 'Laryngoscope',
-      description: 'The Smart, Affordable Solution',
-      details: 'Ganglia’s patented video-laryngoscope is transforming critical airway management by making advanced technology affordable and widely accessible.',
-      image: '/assets/images/laryngoscope.png',
-    },
-    {
-      name: 'TripMacha AI',
-      description: 'Smart Travel Planning',
-      details: 'AI-powered travel planning tool designed for personalized, local getaways.',
-      image: '/assets/images/trip.jpg',
-    },
-  ];
+  
   const navigate=useNavigate();
   const handleOnclick=(product)=>{
     navigate(`/product-detail/${product.name}`, {state:{product}})
