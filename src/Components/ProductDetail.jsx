@@ -104,7 +104,7 @@ const ProductDetail = () => {
         </div>
 
         {/* Right Section */}
-        <div className="my-auto w-[40%]">
+        <div className="my-auto lg:w-[40%]">
           <h1 className="mb-5 text-3xl text-gray-800 font-semibold">
             {product.name} - <span className="italic text-xl text-gray-800">{product.description}</span>
           </h1>
@@ -117,6 +117,9 @@ const ProductDetail = () => {
       {/* Render Key Features Section */}
       <div className="w-[90%] mx-auto">
         <KeyFeatures productName={product.name} />
+      </div>
+      <div className='w-[90%] mx-auto'>
+        <Table productName={product.name}/>
       </div>
     </div>
   );
@@ -135,7 +138,7 @@ const KeyFeatures = ({ productName }) => {
 
 <div className="p-4 lg:ml-36 md:ml-32">
           <h2 className="text-4xl font-bold text-gray-800 mb-4 ml-4">Why choose our {productName}</h2>
-          <p className='text-lg w-2/3 text-left '>
+          <p className='text-lg lg:w-2/3 text-left '>
             At Ganglia Technologies, we combine engineering, AI, and medical expertise to create affordable, high-quality solutions that enhance lives and streamline operations for businesses and institutions.
           </p>
           <h2 className="text-2xl font-bold  text-gray-800 mt-4 ">Key Features & Benefits</h2>
@@ -156,4 +159,15 @@ const KeyFeatures = ({ productName }) => {
       </div>
     );
   };
+
+  //table component
+  const Table=({productName})=>{
+    return(
+      <div className='mt-10 bg-white p-6 rounded-lg shadow-lg'>
+        <table>
+
+        </table>
+      </div>
+    )
+  }
   
