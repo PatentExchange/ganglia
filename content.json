@@ -2,7 +2,7 @@
     "home": {
         "companyName": "Ganglia Technologies",
         "heroTagline": "Unsatisfied with existing technology!",
-        "description": "Ganglia Technologies Pvt. Ltd. is revolutionizing healthcare and AI-driven solutions, making cutting-edge innovation accessible and affordable.",
+        "description": " is revolutionizing healthcare and AI-driven solutions, making cutting-edge innovation accessible and affordable.",
         "ourStory": "Founded with the vision to innovate and simplify complex industries, Ganglia Technologies has grown into a leader in healthcare technology and AI-driven solutions. Our journey began with a passion for making technology more accessible, and today, we’re proud to deliver products that improve lives and enhance business operations.",
         "sections": [
             "Explore Our Products",
@@ -181,7 +181,7 @@
         {
             "name": "Laryngoscope",
              "description":"The Smart, Affordable Solution",
-            "details": "Ganglia Technologies' patented smart video-laryngoscope is designed to provide cutting-edge airway management at an affordable cost. Our device integrates advanced imaging, continuous oxygenation, and user-friendly features, making it the most accessible and efficient solution for medical professionals.",
+            "details": " hello Ganglia Technologies' patented smart video-laryngoscope is designed to provide cutting-edge airway management at an affordable cost. Our device integrates advanced imaging, continuous oxygenation, and user-friendly features, making it the most accessible and efficient solution for medical professionals.",
             "whyChooseUs":"Traditional video-laryngoscopes cost ₹7+ lakhs, making them inaccessible to many hospitals, especially in rural areas. Our affordable, high-quality alternative aims to bridge this gap, priced at just ₹1.5–2 lakhs.",
             "image": "/assets/images/laryngoscope.png",
 
@@ -226,7 +226,9 @@
                 "Medical Colleges & Research Institutions",
                 "Government Healthcare Initiatives"
             ],
+           
             "table":[
+                
                 {"feature":"Price","ourAdvantages":"₹1.5–2 Lakhs","Competitors":"₹7+ Lakhs"},
                 {"feature":"Multiple Cameras","ourAdvantages":"✅ Yes","Competitors":"❌ No"},
                 {"feature":"Continuous Oxygenation","ourAdvantages":"✅ Yes","Competitors":"❌ No"},

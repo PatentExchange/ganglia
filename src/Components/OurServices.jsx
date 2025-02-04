@@ -67,8 +67,8 @@ const OurServices = () => {
                                     style={{ width: "100%", maxWidth: "1200px" }} 
                                 >
                                     {/* Image Section (Fixed) */}
-                                    <div className={`w-full md:w-70 h-64 flex items-center justify-center transition duration-300 object-center ${index % 2 === 1 ? 'md:order-last' : ''}`}>
-                                        <img src={service.image} alt={service.title} className="w-full h-full object-center" />
+                                    <div className={`w-full md:w-70 h-64 flex items-center justify-center transition duration-300 my-auto ${index % 2 === 1 ? 'md:order-last' : ''}`}>
+                                        <img src={service.image} alt={service.title} className="w-full h-full  " />
                                     </div>
 
                                     {/* Text Section (ANIMATED) */}

@@ -5,7 +5,7 @@ import myImage from "/assets/images/landingPage.jpeg"
 import WhoAreWe from "./WhoAreWe";
 import OurTeam from "./OurTeam";
 import content from "../../../content.json"
-
+import { Link } from "react-router-dom";
 export const Home = () => {   
   return (
     <div className="flex flex-col gap-2">
@@ -100,9 +100,9 @@ const OverlayCopy = ({ tagline, heading,description }) => {
       ref={targetRef}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-start pl-4 justify-center text-white overflow-x-clip"
     >
-      <p className="text-left text-xl lg:text-5xl italic md:text-3xl mb-12">{tagline}</p>
+      <p className="text-left text-xl lg:text-5xl italic md:text-4xl mb-12">{tagline}</p>
       <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">{heading}<span className="text-lg">&nbsp; Pvt. Ltd.</span></p>
-      <p className="text-lg">{description}</p>
+      <p className="text-lg lg:text-2xl">{description}</p>
       
     </motion.div>
   );
@@ -121,9 +121,13 @@ const ExampleContent = () => (
         {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         reiciendis blanditiis aliquam aut fugit sint. */}
       </p>
-      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-        Learn more <FiArrowUpRight className="inline" />
-      </button>
+      <Link
+              to="/ourproducts"
+              className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group flex items-center justify-center no-underline"
+            >
+              Learn more
+              <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
+          </Link>
     </div>
   </div>
 );

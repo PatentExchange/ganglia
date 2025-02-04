@@ -34,13 +34,13 @@ export default function NavBar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-1 text-lg relative">
+        <div className="hidden md:hidden lg:flex  text-lg md:text-s relative">
           {tabs.map((tab) => (
             <Link
               key={tab.name}
               to={tab.path}
               onClick={() => setSelected(tab.name)}
-              className="relative text-white px-4 py-1 rounded-md"
+              className="relative text-white px-4  py-1 rounded-md"
             >
               <span className="relative z-10">{tab.name}</span>
               {selected === tab.name && (
@@ -55,7 +55,7 @@ export default function NavBar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -64,7 +64,7 @@ export default function NavBar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col items-center bg-gray-800 py-4 space-y-4 absolute top-full left-0 w-full">
+        <div className="lg:hidden flex flex-col items-center bg-gray-800 py-4 space-y-4 absolute top-full left-0 w-full">
           {tabs.map((tab) => (
             <p key={tab.name}>
               <Link to={tab.path} onClick={() => setIsOpen(false)}>

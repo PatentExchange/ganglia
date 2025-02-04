@@ -1,9 +1,13 @@
 import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import content from '../../content.json';
-
+import { useEffect } from 'react';
 
 export const OurProducts = () => {
+
+  useEffect(()=>{
+      window.scrollTo(0,0)
+    },[])
   
   const navigate=useNavigate();
   const handleOnclick=(product)=>{
@@ -16,7 +20,7 @@ export const OurProducts = () => {
       <div className='absolute inset-0 bg-gray-400 opacity-60 z-0'></div>
   {/* Background Image */}
   <img 
-    src="/assets/images/bg.jpg" 
+    src="/assets/images/productBg.jpg" 
     className="absolute inset-0 w-full h-full object-center mix-blend-multiply z-0" 
     alt="Background"
   />

@@ -18,7 +18,7 @@ const WhoAreWe = () => {
         </div>
 
         <h2 className="absolute left-0 top-36 lg:top-56 md:top-56 text-4xl lg:text-6xl md:text-5xl sm:text-5xl font-bold text-white mb-8 ml-4">
-          Who Are We?<FontAwesomeIcon icon={faRoute} style={{color:'#24194C'}}></FontAwesomeIcon>
+          Who Are We?
         </h2>
 
         {/* Right content */}
@@ -31,12 +31,12 @@ const WhoAreWe = () => {
             {content.home.joinUs}
             </p>
             <Link
-  to="/about"
-  className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group flex items-center justify-center no-underline"
->
-  Learn more
-  <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
-</Link>
+              to="/about"
+              className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group flex items-center justify-center no-underline"
+            >
+              Learn more
+              <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
+          </Link>
             
           </div>
         </div>

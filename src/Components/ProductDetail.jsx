@@ -10,10 +10,13 @@ import content from '../../content.json';
 const ProductDetail = () => {
   const { state } = useLocation();
   const { product } = state || {};  
+  
 
   return (
-    <div className="pt-10 bg-gray-100 min-h-screen pb-12">
-      <div className="flex flex-col lg:flex-row md:flex-row space-x-12 justify-center w-[80%] mx-auto p-4">
+    <div className="pt-7 bg-gray-100 min-h-screen pb-12">
+      <div className="relative flex flex-col lg:flex-row md:flex-row space-x-12 justify-center w-full mx-auto p-4 bg-cover bg-center bg-no-repeat "
+      style={{ backgroundImage: "url('/assets/images/productBg.jpg')" }}>
+         
         {/* Image Section */}
         <div className="h-96">
           <img src={product.image} alt={product.name} className="w-full h-full object-center rounded-xl" />
@@ -25,7 +28,7 @@ const ProductDetail = () => {
             {product.name} - <span className="italic text-xl text-gray-800">{product.description}</span>
           </h1>
           <p className="text-base text-gray-700">
-            {content.products[0].details}
+            {product.details}
           </p>
         </div>
       </div>
@@ -55,7 +58,7 @@ const KeyFeatures = ({ productName }) => {
 <div className="p-4 lg:ml-36 md:ml-32">
           <h2 className="text-4xl font-bold text-gray-800 mb-4 ml-4">Why choose our {productName}</h2>
           <p className='text-lg lg:w-2/3 text-left '>
-            At Ganglia Technologies, we combine engineering, AI, and medical expertise to create affordable, high-quality solutions that enhance lives and streamline operations for businesses and institutions.
+          {productFeatures.whyChooseUs}
           </p>
           <h2 className="text-2xl font-bold  text-gray-800 mt-4 ">Key Features & Benefits</h2>
         </div>
@@ -77,13 +80,36 @@ const KeyFeatures = ({ productName }) => {
   };
 
   //table component
-  const Table=({productName})=>{
-    return(
-      <div className='mt-10 bg-white p-6 rounded-lg shadow-lg'>
-        <table>
-
+  const Table = ({ productName }) => {
+    const tableContent = content.products.find((obj) => obj.name === productName);
+  
+    return (
+      <div className="mt-10 bg-white p-6 rounded-lg shadow-lg">
+<h2 className="text-2xl font-bold text-gray-800 mb-4 ml-4">How We Stand Out</h2>   
+<div className="overflow-x-auto">
+  <table className="w-full border-collapse border border-gray-300">
+          {/* Table Header */}
+          <thead>
+            <tr className="bg-gray-200">
+              <th className="border border-gray-400 px-4 py-2 text-left">Features</th>
+              <th className="border border-gray-400 px-4 py-2 text-left">{productName}</th>
+              <th className="border border-gray-400 px-4 py-2 text-left">Competitors</th>
+            </tr>
+          </thead>
+          
+          {/* Table Body */}
+          <tbody>
+            {tableContent?.table.map((tab, index) => (
+              <tr key={index} className="even:bg-gray-100">
+                <td className="border border-gray-300 px-4 py-2">{tab.feature}</td>
+                <td className="border border-gray-300 px-4 py-2">{tab.ourAdvantages}</td>
+                <td className="border border-gray-300 px-4 py-2">{tab.Competitors}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
+        </div>   
       </div>
-    )
-  }
+    );
+  };
   

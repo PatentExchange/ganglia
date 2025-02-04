@@ -33,7 +33,7 @@ const OurApproach = () => {
 `}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }} // Animation based on scroll position
-              transition={{ delay: index * 0.2, type: 'spring', stiffness: 100 }}
+              transition={{ delay: index * 0.3, type: 'spring', stiffness: 100 }}
             >
               <img src={process.imgurl} className='w-40 h-40 mx-auto' />
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">{process.title}</h3>

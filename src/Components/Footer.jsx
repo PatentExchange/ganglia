@@ -42,7 +42,7 @@ const Footer = () => {
                         <div className="ml-2">
                             <p><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></p>
                             <p><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></p>
-                            <p><Link to="/">Blog</Link></p>
+                            {/* <p><Link to="/">Blog</Link></p> */}
                             <p><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></p>
                         </div>
                     </div>
@@ -51,18 +51,23 @@ const Footer = () => {
                         <h3 className="font-bold text-xl mb-4">Our Services</h3>
                         <div className="ml-2">
                             <p><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></p>
-                            <p><Link to="/services">Our products</Link></p>
+                            <p><Link to="/ourproducts">Our products</Link></p>
                         </div>
                         
                         {/* Social Section */}
                         <div className="mr-6 h-2/3 flex items-center">
                             {/* <h3 className="text-xl font-semibold mb-4">Team Solutions</h3> */}
                             <div className="flex space-x-6 text-2xl">
-                                <FontAwesomeIcon className="transition hover:scale-125" icon={faFacebook} />
-                                <FontAwesomeIcon className="transition hover:scale-125" icon={faXTwitter} />
-                                <FontAwesomeIcon className="transition hover:scale-125" icon={faLinkedin} />
-                                <FontAwesomeIcon className="transition hover:scale-125" icon={faEnvelope} />
-                            </div>
+                                <Link to="https://www.facebook.com/people/Ganglia-Technologies-Private-Limited/100093543685978/"><FontAwesomeIcon className="transition hover:scale-125" icon={faFacebook} /></Link>
+                               
+                                <Link to="https://www.linkedin.com/company/ganglia-technologies-private-limited/"><FontAwesomeIcon className="transition hover:scale-125" icon={faLinkedin} /></Link>
+                                <a href="mailto:info@ganglia.in">
+                                    <FontAwesomeIcon
+                                        className="transition hover:scale-125"
+                                        icon={faEnvelope}
+                                    />
+                                </a>                            
+                                </div>
                         </div>
                     </div>
 
