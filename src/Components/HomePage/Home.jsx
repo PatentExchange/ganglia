@@ -102,7 +102,7 @@ const OverlayCopy = ({ tagline, heading,description }) => {
     >
       <p className="text-left text-xl lg:text-5xl italic md:text-4xl mb-12">{tagline}</p>
       <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">{heading}<span className="text-lg">&nbsp; Pvt. Ltd.</span></p>
-      <p className="text-lg lg:text-2xl">{description}</p>
+      <p className="text-lg lg:text-2xl max-w-5xl">{description}</p>
       
     </motion.div>
   );

@@ -1,17 +1,71 @@
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import content from "../../content.json";
 
 const ContactUs = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        phone: "",
+        message: ""
+    });
+
+    const [status, setStatus] = useState("");
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const subject = `Contact from ${formData.firstName} ${formData.lastName} (${formData.company || 'No Company'})`;
+    //     const body = `${formData.message}\n
+    //     From:
+    //         ${formData.firstName} ${formData.lastName}${formData.company ? '\n'+formData.company + ',' : ''}
+    //         ${formData.phone ? 'Phone: ' + formData.phone : ''}
+    //         Email: ${formData.email}
+    //     `;
+    //     window.location.href = `mailto:director@ganglia.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const serviceID = "service_mf8vf0o";
+        const templateID = "template_m7xa5mf";
+        const userID = "cdH3coS9NNtTTiYXW";
+
+        emailjs.send(serviceID, templateID, formData, userID)
+            .then(() => {
+                setStatus("Message sent successfully!");
+                setFormData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    company: "",
+                    phone: "",
+                    message: "",
+                });
+                alert("Message sent successfully!");
+            })
+            .catch(() => {
+                setStatus("Failed to send the message. Please try again.");
+            });
+    };
+
     return (
         <div className="">
-            <div className="bg-cover bg-center relative"
-            //   style={{ backgroundImage: "url('/assets/images/background.jpeg')" }}
-            >
+            <div className="bg-cover bg-center relative">
                 <div className='absolute inset-0 bg-black opacity-90 -z-10'>
                     <img src="/assets/images/contactBG.jpeg" className='w-full h-64 object-cover mask-image brightness-50' />
 
@@ -34,12 +88,12 @@ const ContactUs = () => {
                     <div className="mt-10">
                         <span className="text-lg font-semibold">{content.contactUs.title}</span>,
                         <br />
-                        <p className="ml-3">
+                        <div className="ml-3">
                             {content.contactUs.address.map((element, index) => (
-                                <p>{element}</p>
+                                <p key={index}>{element}</p>
                             ))}
 
-                        </p>
+                        </div>
                     </div>
                     <p className="text-red-500 mt-2">{content.contactUs.footNote}</p>
                 </div>
@@ -47,13 +101,13 @@ const ContactUs = () => {
                 {/* Contact Form */}
                 <div className="p-8 rounded-lg w-full">
                     <h2 className="text-xl font-semibold border-b pb-2 mb-4">Send Us a Message</h2>
-                    <form className="grid grid-cols-2 gap-4">
-                        <input type="text" placeholder="First Name" className="p-3 bg-gray-200 rounded" />
-                        <input type="text" placeholder="Last Name" className="p-3 bg-gray-200 rounded" />
-                        <input type="email" placeholder="Email *" className="p-3 bg-gray-200 rounded col-span-2" />
-                        <input type="text" placeholder="Company" className="p-3 bg-gray-200 rounded" />
-                        <input type="text" placeholder="Phone" className="p-3 bg-gray-200 rounded" />
-                        <textarea placeholder="Your Message" className="p-3 bg-gray-200 rounded col-span-2 h-28"></textarea>
+                    <form className="grid grid-cols-2 gap-4" onSubmit={handleSubmit}>
+                        <input type="text" placeholder="First Name" name="firstName" value={formData.firstName} onChange={handleChange} className="p-3 bg-gray-200 rounded" required />
+                        <input type="text" placeholder="Last Name" name="lastName" value={formData.lastName} onChange={handleChange} className="p-3 bg-gray-200 rounded" />
+                        <input type="email" placeholder="Email *" name="email" value={formData.email} onChange={handleChange} className="p-3 bg-gray-200 rounded col-span-2" required />
+                        <input type="text" placeholder="Company (optional)" name="company" value={formData.company} onChange={handleChange} className="p-3 bg-gray-200 rounded" />
+                        <input type="text" placeholder="Phone" name="phone" value={formData.phone} onChange={handleChange} className="p-3 bg-gray-200 rounded" />
+                        <textarea placeholder="Your Message" name="message" value={formData.message} onChange={handleChange} className="p-3 bg-gray-200 rounded col-span-2 h-28" required></textarea>
                         <button className="col-span-2 bg-neutral-900 text-white py-3 rounded transition-colors hover:scale-101">Submit</button>
                     </form>
                 </div>

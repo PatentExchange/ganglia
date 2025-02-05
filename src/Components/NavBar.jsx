@@ -28,10 +28,10 @@ export default function NavBar() {
   return (
     <nav className="bg-gray-800 p-4 text-white fixed top-0 left-0 w-full shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex flex-row gap-2">
+        <Link className="flex flex-row gap-2" to={"/"}>
           <img src="/assets/images/gangliaLogo.png" className="h-8 w-8" />
-          <h1 className="text-xl font-bold">{content.home.companyName}<small className="text-xs italic">&nbsp; Pvt. Ltd.</small></h1>
-        </div>
+          <h1 className="text-xl font-bold">{content.home.companyName}<small className="text-xs">&nbsp; Pvt. Ltd.</small></h1>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:hidden lg:flex  text-lg md:text-s relative">
