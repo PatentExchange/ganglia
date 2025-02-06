@@ -2,7 +2,7 @@
     "home": {
         "companyName": "Ganglia Technologies",
         "heroTagline": "Unsatisfied with existing technology!",
-        "description": " is revolutionizing healthcare and AI-driven solutions, making cutting-edge innovation accessible and affordable.",
+        "description": "Ganglia Technologies private limited is revolutionizing healthcare and AI-driven solutions, making cutting-edge innovation accessible and affordable.",
         "ourStory": "Founded with the vision to innovate and simplify complex industries, Ganglia Technologies has grown into a leader in healthcare technology and AI-driven solutions. Our journey began with a passion for making technology more accessible, and today, we’re proud to deliver products that improve lives and enhance business operations.",
         "sections": [
             "Explore Our Products",
@@ -26,23 +26,14 @@
         {
             "name": "Dr Jayaraj Mymbilly Balakrishnan",
             "image": "/assets/images/chairman.jpg",
-            "position": "Chairman"
+            "position": "Chairman & Co-Founder"
         },
         {
             "name": "Dr Dasharathraj K Shetty",
             "image": "/assets/images/md.jpg",
-            "position": "Managing Director"
+            "position": "MD & Founder"
         },
-        {
-            "name": "Namesh Malarout",
-            "image": "/assets/images/ceo.png",
-            "position": "CEO"
-        },
-        {
-            "name": "Commander(Dr) Anil Rana",
-            "image": "/assets/images/advisor_mentor.jpg",
-            "position": "Advisor and Mentor"
-        },
+        
         {
             "name": "Dr Sandeep S Shenoy",
             "image": "/assets/images/director.jpg",
@@ -52,6 +43,11 @@
             "name": "Dr Balakrishna S Maddodi",
             "image": "/assets/images/vice_chairman.jpg",
             "position": "Vice Chairman"
+        },
+        {
+            "name": "Namesh Malarout",
+            "image": "/assets/images/ceo.png",
+            "position": "Chief Executive Officer"
         },
         {
             "name": "Shreepathy Ranga Bhatta",
