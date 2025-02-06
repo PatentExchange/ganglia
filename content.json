@@ -54,14 +54,14 @@
             "position": "Vice Chairman"
         },
         {
-            "name": "Lorem, ipsum dolor.",
-            "image": "/assets/images/member1.jpg",
-            "position": "Member"
+            "name": "Shreepathy Ranga Bhatta",
+            "image": "/assets/images/CFO.jpg",
+            "position": "CFO"
         },
         {
-            "name": "Lorem, ipsum dolor.",
-            "image": "/assets/images/member2.jpg",
-            "position": "Member"
+            "name": "Anusha Pai",
+            "image": "/assets/images/CMO.jpg",
+            "position": "CMO"
         }
     ],
     "aboutUs": {
