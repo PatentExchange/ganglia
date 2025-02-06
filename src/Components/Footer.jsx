@@ -1,5 +1,5 @@
-import { faFacebook, faLinkedin, faTwitter, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faM, faMailBulk, faX } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";

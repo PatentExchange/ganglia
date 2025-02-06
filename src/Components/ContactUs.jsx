@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import content from "../../content.json";
+import { toast, ToastContainer } from "react-toastify";
 
 const ContactUs = () => {
     useEffect(() => {
@@ -18,8 +19,6 @@ const ContactUs = () => {
         phone: "",
         message: ""
     });
-
-    const [status, setStatus] = useState("");
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,7 +46,6 @@ const ContactUs = () => {
 
         emailjs.send(serviceID, templateID, formData, userID)
             .then(() => {
-                setStatus("Message sent successfully!");
                 setFormData({
                     firstName: "",
                     lastName: "",
@@ -56,15 +54,29 @@ const ContactUs = () => {
                     phone: "",
                     message: "",
                 });
-                alert("Message sent successfully!");
+                toast.success("Message sent successfully!");
             })
             .catch(() => {
-                setStatus("Failed to send the message. Please try again.");
+                toast.error("Failed to send the message. Please try again.");
             });
     };
 
     return (
         <div className="">
+            <ToastContainer
+                position="top-center"
+                autoClose={1200}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                className={'p-4'}
+                toastClassName={() => "relative flex p-6 rounded-md justify-between cursor-pointer bg-white text-black"}
+            />
             <div className="bg-cover bg-center relative">
                 <div className='absolute inset-0 bg-black opacity-90 -z-10'>
                     <img src="/assets/images/contactBG.jpeg" className='w-full h-64 object-cover mask-image brightness-50' />
