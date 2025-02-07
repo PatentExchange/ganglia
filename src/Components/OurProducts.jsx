@@ -1,45 +1,44 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import content from '../../content.json';
 import { useEffect } from 'react';
 
 export const OurProducts = () => {
 
-  useEffect(()=>{
-      window.scrollTo(0,0)
-    },[])
-  
-  const navigate=useNavigate();
-  const handleOnclick=(product)=>{
-    navigate(`/product-detail/${product.name}`, {state:{product}})
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  const navigate = useNavigate();
+  const handleOnclick = (product) => {
+    navigate(`/product-detail/${product.name}`, { state: { product } })
   }
 
   return (
-    <div className=" bg-gray-100 py-7 ">
+    <div className=" bg-gray-100 py-4">
       <div className=" relative h-72 flex flex-col items-center justify-center text-center">
-      <div className='absolute inset-0 bg-gray-400 opacity-60 z-0'></div>
-  {/* Background Image */}
-  <img 
-    src="/assets/images/productBg.jpg" 
-    className="absolute inset-0 w-full h-full object-center mix-blend-multiply z-0" 
-    alt="Background"
-  />
-  {/* Text Content */}
-  <div className="relative  bg-white/50 p-4 h-full w-full">
-    <h1 className="text-4xl font-bold text-gray-700 mb-6">Our Products</h1>
-    <p className="text-gray-600 mb-10 mx-auto max-w-5xl text-lg">
-      {content.ourProducts}
-    </p>
-  </div>
-</div>
-
+        <div className='absolute inset-0 bg-gray-400 opacity-60 z-0'></div>
+        {/* Background Image */}
+        <img
+          src="/assets/images/productBg.jpg"
+          className="absolute inset-0 w-full h-full object-center mix-blend-multiply z-0"
+          alt="Background"
+        />
+        {/* Text Content */}
+        <div className="relative  bg-white/50 p-10 h-full w-full">
+          <h1 className="text-4xl font-bold text-gray-700 mb-6">Our Products</h1>
+          <p className="text-gray-600 mb-10 mx-auto max-w-5xl text-lg">
+            {content.ourProducts}
+          </p>
+        </div>
+      </div>
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:w-3xl  mx-auto relative -top-23">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:w-3xl  mx-auto relative -top-16">
         {content.products.map((product, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="text-gray-800 shadow-lg shadow-gray-400 rounded-lg overflow-hidden h-full flex flex-col transform transition duration-300 mx-5 ease-in-out hover:scale-105 hover:shadow-gray-500"
-            onClick={(e)=>{handleOnclick(product)}}
+            onClick={(e) => { handleOnclick(product) }}
           >
             {/* Image Section - Takes 2/3 height */}
             <div className="h-60">

@@ -1,5 +1,8 @@
 import React from "react";
 import content from "../../../content.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "lucide-react";
 
 const OurTeam = () => {
   return (
@@ -17,10 +20,12 @@ const OurTeam = () => {
           {content.ourTeam.map((member, index) => (
             <div
               key={index}
-              className={`bg-white p-6 rounded-lg shadow-lg ${
-                index % 2 !== 0 ? "transform -translate-y-6" : ""
+              className={`bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition ${
+                index % 2 !== 0 ? "transform -translate-y-6 hover:-translate-y-7" : "hover:-translate-y-1"
               }`} // Apply transform to every 2nd member
             >
+              <a href={member.linkedIn}
+              target="_blank">              
               <img
                 src={member.image}
                 alt={member.name}
@@ -32,6 +37,8 @@ const OurTeam = () => {
               <h4 className="text-base font-semibold text-gray-600">
                 {member.position}
               </h4>
+              </a>
+              {/* <FontAwesomeIcon icon={faLinkedin} className="text-3xl pt-2 "/> */}
             </div>
           ))}
         </div>

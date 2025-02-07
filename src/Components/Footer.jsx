@@ -3,7 +3,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
-import myImage from "/assets/images/gangliaLogo.png"
+import myImage from "/assets/images/GANGLIA LOGO.png"
 import content from "../../content.json";
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="py-6 relative overflow-hidden">
                 <div className="mx-auto justify-between ml-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="inline text-gray-400">
-                        <img src={myImage} className="h-20 w-22" />
+                        <img src={myImage} className="h-10 mb-2" />
                         <p>Phone: {content.contact.phone}</p>
                         <p>Headquarters: {content.contact.headquarters}</p>
                         <p>Email: {content.contact.email}</p>
@@ -22,8 +22,9 @@ const Footer = () => {
                     <div className="text-lg">
                         <h3 className="font-bold text-xl mb-4">Company</h3>
                         <div className="ml-2">
-                            <p><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></p>
+                            {/* <p><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></p> */}
                             <p><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></p>
+                            <p><Link to="/ourteam" onClick={() => setIsOpen(false)}>Our team</Link></p>
                             {/* <p><Link to="/">Blog</Link></p> */}
                             <p><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></p>
                         </div>
@@ -44,7 +45,7 @@ const Footer = () => {
                             <Link to="https://www.facebook.com/people/Ganglia-Technologies-Private-Limited/100093543685978/"><FontAwesomeIcon className="transition hover:scale-125" icon={faFacebook} /></Link>
                             <Link to="https://x.com/Ganglia_in"><FontAwesomeIcon className="transition hover:scale-125" icon={faXTwitter} /></Link>
                             <Link to="https://www.linkedin.com/company/ganglia-technologies-private-limited/"><FontAwesomeIcon className="transition hover:scale-125" icon={faLinkedin} /></Link>
-                            <a href="mailto:info@ganglia.in">
+                            <a href={`mailto:${content.contact.email}`}>
                                 <FontAwesomeIcon
                                     className="transition hover:scale-125"
                                     icon={faEnvelope}

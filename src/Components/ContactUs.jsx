@@ -65,7 +65,7 @@ const ContactUs = () => {
         <div className="">
             <ToastContainer
                 position="top-center"
-                autoClose={1200}
+                autoClose={1000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick

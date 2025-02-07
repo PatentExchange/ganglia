@@ -42,7 +42,7 @@ const TextParallaxContent = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className="relative h-[150vh]">
+      <div className="relative h-[125vh] md:h-[150vh] lg:h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy
           heading={heading}
@@ -50,6 +50,7 @@ const TextParallaxContent = ({
           description={description}
         />
       </div>
+      
       {children}
     </div>
   );
@@ -106,18 +107,24 @@ const OverlayCopy = ({ tagline, heading, description }) => {
       ref={targetRef}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-start pl-4 justify-center text-white overflow-x-clip"
     >
-      <p className="mb-2 text-left text-2xl font-bold  md:mb-4 md:text-5xl  ">
-        {heading}
-        <span className="text-lg">&nbsp; Pvt. Ltd.</span>
-      </p>
-      <p className="text-left text-xl lg:text-5xl md:text-4xl mb-12">
+      <img src="/assets/images/GANGLIA_text.png" className="mb-10 sm:h-auto h-20" style={{ fontFamily: "'Montserrat', sans-serif"}}></img>
+      {/* <div>
+        <h1 className="text-7xl font-bold font-[Montserrat]" style={{ fontFamily: "'Montserrat', sans-serif"}}>{content.logo.titlePrimary}</h1>
+        <h3 className="text-[27px] -mt-1 mb-6 pl-2 font-semibold">{content.logo.titleSecondary}</h3>
+      </div> */}
+      <p className="text-left text-2xl lg:text-5xl md:text-4xl mb-4">
         {tagline}
       </p>
-      <p className="text-lg lg:text-2xl">
-        Ganglia Technologies private limited is revolutionizing healthcare and
-        AI-driven solutions,
-        <br /> making cutting-edge innovation accessible and affordable.,
+      <p className="text-md lg:text-xl max-w-5/6">
+        {content.home.description}
       </p>
+      <Link
+        to="/services"
+        className="w-1/2 md:w-64 lg:w-64  rounded mt-10 bg-white px-4 py-3 text-lg text-black transition-colors hover:scale-105  group flex items-center justify-center no-underline"
+      >
+        Our Services  
+        <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
+      </Link>
     </motion.div>
   );
 };
@@ -131,10 +138,7 @@ const ExampleContent = () => (
       <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
         {content.home.ourStory}
       </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint. */}
-      </p>
+
       <Link
         to="/ourproducts"
         className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group flex items-center justify-center no-underline"

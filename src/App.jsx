@@ -18,9 +18,9 @@ import { OurProducts } from './Components/OurProducts'
 import Blog from './Components/Blog'
 import { useEffect } from 'react'
 import ProductDetail from './Components/ProductDetail'
+import AwardDetails from './Components/AwardDetails'
 
 function App() {
-  
   
   return (
     <div>
@@ -28,22 +28,21 @@ function App() {
        <div >
       <NavBar />
       </div>
-      <div className='  w-full mt-10 '>
+      <div className='  w-full mt-14'>
         <Routes>
           
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<OurServices/>} />
           <Route path="/ourproducts" element={<OurProducts/>} />
-
           <Route path="/blog" element={<Blog/>} />
           <Route path="/contact" element={<ContactUs/>} />
+          <Route path="/ourteam" element={<OurTeam/>} />
           <Route path="/product-detail/:title" element={<ProductDetail/>} />
         </Routes>
       </div>
       <Footer/>
     </BrowserRouter>
-      
     </div>
   )
 }
