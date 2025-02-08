@@ -42,7 +42,7 @@ const TextParallaxContent = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className="relative h-[125vh] md:h-[150vh] lg:h-[150vh]">
+      <div className="relative h-[100vh] md:h-[150vh] lg:h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy
           heading={heading}

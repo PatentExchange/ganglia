@@ -14,16 +14,16 @@ const ProductDetail = () => {
 
   return (
     <div className="pt-7 bg-gray-100 min-h-screen pb-12">
-      <div className="relative flex flex-col lg:flex-row md:flex-row space-x-12 justify-center w-full mx-auto p-4 bg-cover bg-center bg-no-repeat "
+      <div className="relative flex flex-col lg:flex-row md:flex-row space-x-12 justify-center w-full mx-auto p-4 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/assets/images/productBg.jpg')" }}>
          
         {/* Image Section */}
-        <div className="h-96">
+        <div className="h-96 mx-auto md:mx-10">
           <img src={product.image} alt={product.name} className="w-full h-full object-center rounded-xl" />
         </div>
 
         {/* Right Section */}
-        <div className="my-auto lg:w-[40%]">
+        <div className="mt-10 md:my-auto md:w-[40%] px-4">
           <h1 className="mb-5 text-3xl text-gray-800 font-semibold">
             {product.name} - <span className="italic text-xl text-gray-800">{product.description}</span>
           </h1>

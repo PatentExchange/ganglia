@@ -10,7 +10,7 @@ const OurServices = () => {
     return (
         <div className="bg-white h-auto ">
             {/* New Background Section at the Top */}
-            <div className="relative max-h-64 bg-gray-100">
+            <div className="relative bg-gray-100">
                 <div className='absolute inset-0 bg-gray-300 opacity-60 z-0'></div>
                 {/* Background Image */}
                 <img
@@ -19,15 +19,15 @@ const OurServices = () => {
                     alt="Background"
                 />
                 <div
-                    className="w-full h-64 md:h-70 lg:h-80 bg-cover bg-center"
+                    className="w-full h-fit bg-cover bg-center pb-4"
                 // initial={{ opacity: 0, y: -100 }}
                 // animate={{ opacity: 1, y: -60 }}
                 // transition={{ duration: 1, ease: "easeOut" }}
                 >
                     {/* Text Overlay on Background */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center z-10">
-                        <h2 className="sm:text-3xl font-bold mb-4 text-gray-700">{content.servicesPage.heroTitle}</h2>
-                        <p className='text-lg text-gray-600'>{content.servicesPage.heroSubtitle}</p>
+                    <div className=" transform text-center z-10 py-14">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-700">{content.servicesPage.heroTitle}</h2>
+                        <p className='text-base md:text-lg text-gray-600'>{content.servicesPage.heroSubtitle}</p>
                     </div>
                 </div>
             </div>

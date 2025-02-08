@@ -22,24 +22,24 @@ const WhoAreWe = () => {
         </h2>
 
         {/* Right content */}
-        <div className="relative text-left mt-10 w-[90%] lg:w-full md:w-full h-[300px]">
-          <div className="absolute left-10 lg:-left-10 md:-left-10 -top-30 lg:top-0 md:top-0 p-6 lg:p-20 md:p-16 text-base lg:text-xl md:text-xl bg-gray-100 rounded-md shadow-xl">
-            <p>
-              {content.home.whoAreWe}
-            </p>
-            <p className="text-base mt-2 text-blue-950">
-            {content.home.joinUs}
-            </p>
-            <Link
-              to="/about"
-              className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group flex items-center justify-center no-underline"
-            >
-              Learn more
-              <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
-          </Link>
-            
-          </div>
-        </div>
+        <div className="relative text-left -mt-20 md:mt-10 mx-4 md:-ml-10 w-[90%] lg:w-full md:w-full h-fit flex justify-center">
+  <div className="p-6 md:p-16 lg:p-20 text-base md:text-xl lg:text-xl bg-gray-100 rounded-md shadow-xl  ">
+    <p>
+      {content.home.whoAreWe}
+    </p>
+    <p className="text-base mt-2 text-blue-950">
+      {content.home.joinUs}
+    </p>
+    <Link
+      to="/about"
+      className="w-full rounded mt-2 bg-neutral-900 px-4 py-3 text-lg text-white transition-colors hover:scale-105 md:w-fit group flex items-center justify-center no-underline"
+    >
+      Learn more
+      <FiArrowUpRight className="inline transition-transform duration-300 group-hover:rotate-45" />
+    </Link>
+  </div>
+</div>
+
       </div>
     </div>
   );

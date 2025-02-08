@@ -4,17 +4,14 @@ import AwardDetails from './AwardDetails';
 
 const Milestones = () => {
 
-  const [visiblity,setVisible]=useState(false)
   const [selectedAward,setSelected]=useState("")
 
   const openCertificate=(award)=>{
     setSelected(award)
-    setVisible(true)
   }
 
-  const closeCertificate=(award)=>{
+  const closeCertificate=()=>{
     setSelected(null)
-    setVisible(false)
   }
 
   return (
@@ -42,7 +39,7 @@ const Milestones = () => {
         {
           selectedAward && (
             <div className='fixed inset-0 z-20'>
-              <AwardDetails award={selectedAward} isVisible={visiblity} close={closeCertificate}/>
+              <AwardDetails award={selectedAward} close={closeCertificate}/>
             </div>
           )
         }

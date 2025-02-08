@@ -16,7 +16,7 @@ export const OurProducts = () => {
 
   return (
     <div className=" bg-gray-100 py-4">
-      <div className=" relative h-72 flex flex-col items-center justify-center text-center">
+      <div className=" relative h-fit flex flex-col items-center justify-center text-center">
         <div className='absolute inset-0 bg-gray-400 opacity-60 z-0'></div>
         {/* Background Image */}
         <img
@@ -33,7 +33,7 @@ export const OurProducts = () => {
         </div>
       </div>
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:w-3xl  mx-auto relative -top-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 min-w-3/4 md:min-w-2xl max-w-3xl  mx-auto relative -top-16">
         {content.products.map((product, index) => (
           <div
             key={index}
